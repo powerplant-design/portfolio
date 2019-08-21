@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono:400,400i&display=swap");
+* {
+    box-sizing: border-box;
+}
+:root {
+    --color-main: aquamarine;
+    --color-bg: #1c1c1c;
+    --nav-height: 50px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    font-size: 1rem;
+}
+h1 {
+    font-size: 2rem;
+}
+body {
+    background-color: #1c1c1c;
+    color: var(--color-main);
+    font-family: "Roboto Mono", monospace;
+}
+nav {
+    z-index: 666;
+    background-color: var(--color-bg);
+    border-bottom: 1px solid var(--color-main);
+    width: 100%;
+    height: var(--nav-height);
+    position: fixed;
+    padding: 1rem;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+}
+nav p,
+ul,
+li {
+    margin: 0;
+}
+a,
+a:visited {
+    text-decoration: none;
+    color: var(--color-main);
+}
+a:hover,
+a:focus {
+    outline: none;
+    text-shadow: 0 0 10px var(--color-main);
+    text-decoration: underline;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+main {
+    background-color: black;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+.welcome-section {
+    padding-top: 40px;
+    margin-bottom: 10px;
+    height: 100vh;
+    width: 100%;
+    background-image: url(../img/rzzl-bg-portfolio.gif);
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.welcome-content {
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-main);
+    padding: 2rem 3rem;
+}
+.sticky-section:before {
+    display: block;
+    content: " ";
+    margin-top: -50px;
+    height: 50px;
+    visibility: hidden;
+    pointer-events: none;
+}
+.sticky-section {
+    padding: 0 2rem;
+}
+.sticky-title {
+    position: sticky;
+    top: 60px;
+}
+.project-tile {
+    border-bottom: 1px solid #1c1c1c;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    margin-bottom: 16px;
+}
+.project-info {
+    padding: 10px 1rem;
+    width: 20%;
+    height: 80vh;
+    /* position: sticky;
+    top: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; */
+}
+.project-info h3 {
+    position: sticky;
+    top: 90px;
+    margin-bottom: 16px;
+}
+.project-info p {
+    margin: 0 0 10px 16px;
+    position: sticky;
+    top: 120px;
+}
+.project-content {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.project-content img {
+    background-color: #fff;
+    max-width: 80%;
+    height: 100%;
+}
+.about-section,
+.contact-section {
+    height: 100vh;
+}
+.about-container,
+.contact-container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about-tile,
+.contact-tile {
+    width: 600px;
+    height: 400px;
+    background-color: #fff;
+}
+.eit-site {
+    width: 1000px;
+    max-height: 680px;
+    overflow: hidden;
+}
