@@ -18,71 +18,99 @@
             </div>
             <div>
                 <ul>
-                    <li><a href="#projects-section">PROJECTS</a> /</li>
-                    <li>&nbsp;<a href="#about-section">ABOUT</a> /</li>
-                    <li>&nbsp;<a href="#contact-section">CONTACT</a></li>
+                    <li><a href="#projects">PROJECTS</a>&nbsp;/</li>
+                    <li>&nbsp;<a href="#about">ABOUT</a>&nbsp;/</li>
+                    <li>&nbsp;<a href="#contact">CONTACT</a></li>
+                    <button id="darkmode" class="darkmode">☯</button>
                 </ul>
             </nav>
         </div>
 
         <section id="welcome-section" class="welcome-section sticky">
             <div class="welcome-content">
-                <h1>DESIGN, DEV, DRAWING</h1>
+                <img src="./img/rzzl-worldwide.gif" alt="Logo">
             </div>
         </section>
 
-        <section id="projects-section" class="sticky-section projects-section">
+        <section id="projects" class="sticky-section projects-section">
             <div class="sticky-title">
-                <h2>↳PROJECTS / DESIGN / DEV / DRAW</h2>
+                <h2><a href="#projects">↳PROJECTS</a></h2>
             </div>
             <!-- 1ST PROJECT -->
-            <div class="project-container">
-                <div class="project-tile">
+                <div id="project-eit" class="project-tile">
                     <div class="project-info">
                         <h3>↳EM IN TOYLAND</h3>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt officiis consectetur minus quam ducimus? Eos, non ex optio cumque voluptate alias facilis error accusantium excepturi dolor ea ab est aut.</p>
+                        <div class="project-description">
+                            <p>Art direction, logotype, digital sex toy illustrations and site build for Emma from emintoyland.com</p>
+                            <a href="https://emintoyland.com" target="blank">VIEW SITE ⇢</a>
+                        </div>
                     </div>
                     <div class="project-content">
-                        <iframe class="eit-site" src="https://emintoyland.com" frameborder="0"></iframe>
+                        <div class="project-content-inner">
+                            <div class="img-eit-site-box">
+                                <img class="img-eit-site img-green-box" src="./img/rzzl-eit-site.jpg" alt="Em in Toyland Site">
+                                <img src="./img/rzzl-eit-sparklez.gif" alt="sparklez" class="img-sparklez">
+                            </div>  
+                            <div class="img-50-50">
+                                <img src="./img/rzzl-eit-post-02.jpg" alt="" class="img-50 img-green-box">  
+                                <img src="./img/rzzl-eit-post-01.jpg" alt="" class="img-50 img-green-box">  
+                            </div>
+                                
+                        </div>
+                            
                     </div>
                 </div>
                 
                 <!-- 2ND PROJECT -->
-                <div class="project-container">
-                        <div class="project-tile">
+                        <div id="project-spacelamp" class="project-tile">
                             <div class="project-info">
-                                <h3>↳TITLE2</h3>
+                                <h3>↳SPACELAMP</h3>
+                                <div class="project-description">
+                                        <p>Art direction, custom typography, animated logo and site build for Ash from Spacelamp</p>
+                                        <a href="https://spacelamp.nz" target="blank">VIEW SITE ⇢</a>
+                                    </div>
                             </div>
-                            <div class="project-content">
-                                    <img src="./img/doit.png">
+                            <div class="project-content no-flex">
+                                <div class="project-content-inner">
+                                    <iframe src="https://spacelamp.nz" frameborder="0" class="img-spacelamp img-green-box"></iframe>
+                                </div>
                             </div>
                         </div>
                         
-            </div>
         </section>
 
-        <section id="about-section" class="sticky-section about-section">
+        <section id="about" class="sticky-section about-section">
                 <div class="sticky-title">
                     <h2>↳ABOUT</h2>
                 </div>
                 <!-- ABOUT CONTENT -->
                 <div class="about-container">
                     <div class="about-tile">
-                        
+                        <p>Hi, I'm Jay, a freelance / remote graphic designer with 10 years experience in the industry. <br> Currently expanding my skills into front-end web development.</p>
                     </div>
                     
                     
                 </div>
         </section>
 
-        <section id="contact-section" class="sticky-section contact-section">
+        <section id="contact" class="sticky-section contact-section">
                 <div class="sticky-title">
                     <h2>↳CONTACT</h2>
                 </div>
                 <!-- CONTACT CONTENT -->
                 <div class="contact-container">
                     <div class="contact-tile">
-                        
+                        <form name="contact" method="POST" data-netlify="true">
+                                
+                                    <label><p>Name:</p><input type="text" name="name" placeholder="Sassy M9" autocomplete="off" /></label>   
+                               
+                                    <label><p>Email:</p><input type="email" name="email" placeholder="heh_heh@downunder.party"autocomplete="off"/></label>
+                                
+                                    <label><p>Txt ☞</p><textarea name="message" placeholder="whaddayehtalkenabeeeet?" autocomplete="off"></textarea></label>
+                                
+                                    <div class="flex-button"><button type="submit">Send</button></div>
+                                
+                        </form>
                     </div>
                     
                     
@@ -90,5 +118,6 @@
         </section>
         <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
         <script src="./js/scroll.js"></script>
+        <script src="./js/darkmode.js"></script>
     </body>
 </html>

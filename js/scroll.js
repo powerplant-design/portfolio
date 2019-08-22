@@ -14,7 +14,7 @@ $(function() {
                     {
                         scrollTop: target.offset().top
                     },
-                    600
+                    800
                 );
                 return false;
             }
