@@ -34,11 +34,13 @@ h1 {
     font-family: "BioRhyme Expanded", serif;
     margin-bottom: 0.6rem;
 }
+html,
+body {
+    scroll-behavior: smooth;
+}
 body {
     background-color: var(--color-bg);
     color: var(--color-main);
-    /* font-family: "Bizz Hist", monospace;
-    letter-spacing: 0.2px; */
     font-family: "Roboto Mono", monospace;
     line-height: 1.5;
     transition: background-color 500ms ease;
