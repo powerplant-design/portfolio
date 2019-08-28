@@ -17,6 +17,20 @@
     --nav-height: 50px;
     --color-overlay: aquamarine;
 }
+
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+h5::selection,
+h6::selection,
+p::selection,
+a::selection,
+li::selection,
+button::selection {
+    color: var(--color-bg);
+    background-color: var(--color-main);
+}
 h1,
 h2,
 h3,
@@ -30,7 +44,7 @@ p {
     margin: 0;
 }
 h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-family: "BioRhyme Expanded", serif;
     margin-bottom: 0.6rem;
 }
@@ -122,9 +136,7 @@ main {
     z-index: 10;
     position: sticky;
     top: 50px;
-    /* background-image: linear-gradient(var(--color-bg), var(--color-bg-trns)); */
     padding: 12px 0 10px 16px;
-    /* transition: background-image 1000ms; */
 }
 .project-tile {
     min-height: calc(100vh - 100px);
@@ -145,6 +157,9 @@ main {
     padding: 8px 10px;
     color: var(--color-bg);
     background-color: var(--color-main);
+}
+.project-description p {
+    margin-bottom: 2rem;
 }
 .project-description {
     padding: 0 0 10px 24px;
