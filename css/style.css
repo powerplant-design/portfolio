@@ -414,7 +414,8 @@ svg:hover {
         font-size: 12px;
     }
     .sticky-title {
-        position: static;
+        top: 20px;
+        /* margin-bottom: 20vh; */
     }
     .project-tile {
         display: block;
