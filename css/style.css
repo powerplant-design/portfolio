@@ -361,9 +361,15 @@ svg:hover {
 .hide-mbl {
     display: inline;
 }
+.welcome-txt-mbl {
+    display: none;
+}
 @media (max-width: 560px) {
     :root {
         --nav-height: 30px;
+    }
+    .welcome-txt-mbl {
+        display: block;
     }
     html,
     body {
