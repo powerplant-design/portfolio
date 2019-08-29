@@ -66,12 +66,17 @@ nav {
     width: 100%;
     height: var(--nav-height);
     position: fixed;
-    padding: 1rem;
+    /* padding: 1rem; */
     top: 0;
     left: 0;
     display: flex;
     justify-content: space-between;
     transition: background-color 500ms;
+}
+.nav-links {
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
 }
 nav p,
 ul,
@@ -91,20 +96,16 @@ main {
 .welcome-section {
     position: relative;
     overflow: hidden;
-    padding-top: 40px;
+    /* padding-top: 40px; */
     margin-bottom: 10px;
     height: 100vh;
     width: 100%;
-    /* background-color: var(--color-main); */
-    /* background-color: aquamarine; */
     background-image: url(../img/rzzl-bg-portfolio-bnw.gif);
-    /* background-blend-mode: var(--blend-mode); */
     background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
     border-bottom: 1px solid var(--color-main);
-    /* transition: background-blend-mode 1000ms ease; */
 }
 .welcome-content {
     text-align: center;
@@ -115,11 +116,6 @@ main {
     border: 1px solid var(--color-main);
     padding: 1.6rem 1rem;
 }
-/* .welcome-content img {
-    max-width: 400px;
-    mix-blend-mode: var(--blend-mode);
-    margin: 0;
-} */
 .sticky-section:before {
     display: block;
     content: " ";
@@ -145,7 +141,7 @@ main {
     margin-bottom: 50px;
 }
 .project-info {
-    padding: 0 0 30vh 32px;
+    padding: 0 0 100px 32px;
     width: 300px;
     height: 100%;
     position: sticky;
@@ -185,17 +181,18 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 0 5rem;
 }
 .about-container p {
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.8rem;
     line-height: 1.8;
     margin: 0.8rem 0;
     font-family: "BioRhyme Expanded", serif;
 }
 .about-tile,
 .contact-tile {
-    width: 800px;
+    max-width: 800px;
     height: auto;
     padding: 0 2rem 2rem 2rem;
     margin-top: -30px;
@@ -245,7 +242,7 @@ a:focus {
 }
 /* FORM STYLING */
 form {
-    font-family: Bizz Hist;
+    /* font-family: Bizz Hist; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -262,19 +259,17 @@ form p {
 }
 form input,
 form textarea {
+    font-size: 1rem;
     color: var(--color-main);
     background-color: var(--color-bg);
     background-color: none;
     border: none;
-    /* border: 1px solid var(--color-bg-trns); */
     border: 1px solid transparent;
     border-bottom: 1px solid var(--color-main);
     width: 80%;
     padding: 10px 16px;
     margin-bottom: 20px;
     transition: background-color 500ms;
-    /* border-radius: 10px; */
-    /* box-shadow: 0 5px 10px black; */
 }
 form input:focus,
 form textarea:focus,
@@ -306,15 +301,6 @@ form .flex-button {
     display: flex;
     justify-content: center;
 }
-/* NOT WORKING YET v */
-form input:-webkit-autofill,
-form input:-webkit-autofill:hover,
-form input:-webkit-autofill:focus,
-form textarea:-webkit-autofill,
-form textarea:-webkit-autofill:hover,
-form textarea:-webkit-autofill:focus {
-    background-color: var(--color-bg);
-}
 
 /* EXPERIMENTAL */
 .darkmode {
@@ -322,7 +308,8 @@ form textarea:-webkit-autofill:focus {
     height: 49px;
     width: 49px;
     padding: 1rem;
-    margin: -1rem -1rem 0 1rem;
+    margin-left: 1rem;
+    /* margin: -1rem -1rem 0 1rem; */
     background-color: var(--color-bg);
     color: var(--color-main);
     outline: none;
@@ -355,7 +342,6 @@ form textarea:-webkit-autofill:focus {
     height: 100%;
     position: absolute;
     background-color: var(--color-overlay);
-    /* background-color: var(--color-main); */
     mix-blend-mode: var(--blend-mode);
     transition: background-color 100ms;
 }
@@ -372,8 +358,97 @@ svg:hover {
     align-items: center;
 }
 
-@media only screen and (max-width: 60rem) {
+.hide-mbl {
+    display: inline;
+}
+@media (max-width: 560px) {
+    :root {
+        --nav-height: 30px;
+    }
+    html,
     body {
-        font-size: 14px;
+        overscroll-behavior: none;
+    }
+    .hide-mbl {
+        display: none;
+    }
+    h1 {
+        font-size: 1rem;
+    }
+    .welcome-section {
+        height: 100vh;
+        pointer-events: none;
+        padding: 0 1rem;
+    }
+    nav {
+        width: 100vw;
+    }
+    .nav-links {
+        padding-left: 0.4rem;
+    }
+    .darkmode {
+        margin-left: 0.6rem;
+        width: auto;
+        height: calc(var(--nav-height) - 1px);
+        padding: 0 0.8rem;
+    }
+    .sticky-section:before {
+        margin-top: calc(var(--nav-height) * -1);
+        height: var(--nav-height);
+    }
+    body {
+        font-size: 12px;
+    }
+    h2,
+    h3 {
+        font-size: 12px;
+    }
+    nav p,
+    nav a {
+        font-size: 12px;
+    }
+    .sticky-title {
+        position: static;
+    }
+    .project-tile {
+        display: block;
+    }
+    .project-info {
+        margin: 0 auto;
+        padding: 0%;
+        width: 90%;
+        height: 100%;
+        position: static;
+        top: 96px;
+    }
+    .project-content {
+        width: auto;
+        margin: 0 1rem;
+    }
+    .project-content-inner {
+        max-width: 100%;
+    }
+    .project-description {
+        padding-bottom: 1rem;
+    }
+    .project-description p {
+        margin: 0 1rem 0.5rem 0;
+    }
+    .about-container,
+    .contact-container {
+        margin: 0 1rem;
+        height: 100vh;
+    }
+    .about-container p,
+    .contact-container p {
+        font-size: 1rem;
+        font-family: "Roboto Mono", monospace;
+    }
+    .contact-tile,
+    .about-tile {
+        padding: 0 1rem;
+    }
+    .img-spacelamp {
+        height: 80vh;
     }
 }
