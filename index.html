@@ -12,17 +12,18 @@
         <link rel="stylesheet" href="./css/style.css" />
         <script defer src="./js/darkmode.js"></script>
         <script defer src="./js/stickerz.js"></script>
-        <script
+        <!-- <script
             defer
             src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"
-        ></script>
+        ></script> -->
+        <script defer src="./js/x.js"></script>
     </head>
     <body>
         <nav id="navbar">
             <div class="nav-links">
                 <p>
                     <a href="#welcome-section"
-                        >RZZLDZZL<span class="hide-mbl">.DESIGN</span></a
+                        >RZZLDZZL<span class="hide-mbl">.DESIGN</span> v1.0</span></a
                     >
                 </p>
             </div>
@@ -45,10 +46,8 @@
         <section id="welcome-section" class="welcome-section sticky">
             <div class="welcome-content">
                 <h1>WELCOME TO RZZLDZZL.DESIGN</h1>
-                <p class="hide-mbl">Click for stickers or scroll for work</p>
-                <p class="welcome-txt-mbl">
-                    💻 Projects best viewed on desktop 👀
-                </p>
+                <p>Click for stickers or scroll for work</p>
+                <button id="x-button" class="x-button">X</button>
             </div>
             <div class="colorizer"></div>
         </section>
@@ -60,14 +59,25 @@
             <!-- 1ST PROJECT -->
             <div id="project-eit" class="project-tile">
                 <div class="project-info">
-                    <h3>↳EM IN TOYLAND</h3>
+                    <div class="project-info-mobile-site-links">
+                        <h3>↳EM IN TOYLAND</h3>
+                        <a
+                            href="https://emintoyland.com"
+                            target="blank"
+                            class="show-mobile"
+                            >VIEW SITE ⇢</a
+                        >
+                    </div>
                     <div class="project-description">
                         <p>
                             Art direction, logotype, digital sex toy
                             illustrations and site build for Emma from
                             emintoyland.com
                         </p>
-                        <a href="https://emintoyland.com" target="blank"
+                        <a
+                            href="https://emintoyland.com"
+                            target="blank"
+                            class="hide-mbl"
                             >VIEW SITE ⇢</a
                         >
                     </div>
@@ -90,12 +100,12 @@
                             <img
                                 src="./img/rzzl-eit-post-02.jpg"
                                 alt=""
-                                class="img-50 img-green-box"
+                                class="img-50"
                             />
                             <img
                                 src="./img/rzzl-eit-post-01.jpg"
                                 alt=""
-                                class="img-50 img-green-box"
+                                class="img-50"
                             />
                         </div>
                     </div>
@@ -105,13 +115,24 @@
             <!-- 2ND PROJECT -->
             <div id="project-spacelamp" class="project-tile">
                 <div class="project-info">
-                    <h3>↳SPACELAMP</h3>
+                    <div class="project-info-mobile-site-links">
+                        <h3>↳SPACELAMP</h3>
+                        <a
+                            href="https://spacelamp.nz"
+                            target="blank"
+                            class="show-mobile"
+                            >VIEW SITE ⇢</a
+                        >
+                    </div>
                     <div class="project-description">
                         <p>
-                            Art direction, custom typography, animated logo and
-                            site build for Ash from Spacelamp
+                            Custom typography, animated logo and site build for
+                            Ash from Spacelamp
                         </p>
-                        <a href="https://spacelamp.nz" target="blank"
+                        <a
+                            href="https://spacelamp.nz"
+                            target="blank"
+                            class="hide-mbl"
                             >VIEW SITE ⇢</a
                         >
                     </div>
@@ -199,7 +220,7 @@
                             <input
                                 type="text"
                                 name="name"
-                                placeholder="Sassy M9"
+                                placeholder="CITIZEN X"
                                 autocomplete="off"
                         /></label>
 
@@ -208,7 +229,7 @@
                             <input
                                 type="email"
                                 name="email"
-                                placeholder="heh_heh@downunder.party"
+                                placeholder="hey-man@nice.shot"
                                 autocomplete="off"
                         /></label>
 
@@ -216,7 +237,7 @@
                             ><p>Txt ☞</p>
                             <textarea
                                 name="message"
-                                placeholder="whaddayehtalkenabeeeet?"
+                                placeholder="HIT THE HOOTIE UP"
                                 autocomplete="off"
                             ></textarea
                         ></label>
