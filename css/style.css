@@ -39,6 +39,7 @@ h5,
 h6 {
     margin: 0;
     font-size: 1rem;
+    font-weight: 400;
 }
 p {
     margin: 0;
@@ -242,7 +243,7 @@ a:focus {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 25px;
+    margin-bottom: 1.8rem;
 }
 .img-sparklez {
     width: 40%;
@@ -252,6 +253,7 @@ a:focus {
 .img-50-50 {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 1.8rem;
 }
 .img-50 {
     width: 48%;
@@ -330,9 +332,9 @@ form .flex-button {
 /* EXPERIMENTAL */
 .darkmode {
     display: inline-block;
-    height: 49px;
+    height: calc(var(--nav-height) - 1px);
     width: 49px;
-    padding: 1rem;
+    /* padding: 1rem; */
     margin-left: 1rem;
     /* margin: -1rem -1rem 0 1rem; */
     background-color: var(--color-bg);
@@ -370,6 +372,19 @@ form .flex-button {
     mix-blend-mode: var(--blend-mode);
     transition: background-color 100ms;
 }
+.portfolio-txt {
+    z-index: 666;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-image: url("../img/rzzl-portfolio"); */
+}
+.portfolio-txt img {
+    max-width: 90%;
+}
 svg {
     fill: var(--color-main);
     margin: 0.6rem;
@@ -391,6 +406,15 @@ svg:hover {
 }
 
 /* QUERIES BEGIN! */
+@media (max-width: 800px) {
+    :root {
+        --nav-height: 40px;
+    }
+    body {
+        font-size: 14px;
+    }
+}
+
 @media (max-width: 560px) {
     :root {
         --nav-height: 30px;
@@ -422,9 +446,9 @@ svg:hover {
         padding-left: 0.4rem;
     }
     .darkmode {
-        margin-left: 0.6rem;
+        margin-left: 0.4rem;
         width: auto;
-        height: calc(var(--nav-height) - 1px);
+        /* height: calc(var(--nav-height) - 1px); */
         padding: 0 0.8rem;
     }
     .sticky-section:before {

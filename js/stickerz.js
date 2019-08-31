@@ -1,10 +1,12 @@
 const imgs = [
     "../img/stickerz/rzzl-stckr-penta.gif",
     "../img/stickerz/rzzl-stckr-grow.gif",
+    "../img/stickerz/rzzl-stckr-titanic.gif",
     "../img/stickerz/rzzl-stckr-global-noise.gif",
     "../img/stickerz/rzzl-stckr-rxdbmap.png",
     "../img/stickerz/rzzl-stckr-thanks.png",
     "../img/stickerz/rzzl-stckr-skelly.png",
+    "../img/stickerz/rzzl-stckr-atencio-satan.gif",
     "../img/stickerz/rzzl-stckr-badge.gif",
     "../img/stickerz/rzzl-stckr-snakegrabber.png",
     "../img/stickerz/rzzl-stckr-grunge.png",
