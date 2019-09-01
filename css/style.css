@@ -14,7 +14,7 @@
     --color-bg: rgba(28, 28, 28, 1);
     --color-bg-trns: rgba(28, 28, 28, 0);
     --blend-mode: multiply;
-    --nav-height: 50px;
+    --nav-height: 40px;
     --color-overlay: aquamarine;
 }
 
@@ -114,7 +114,6 @@ main {
     max-width: 600px;
     z-index: 777;
     opacity: 1;
-    /* pointer-events: none; */
     background-color: var(--color-bg);
     border: 1px solid var(--color-main);
     padding: 1.6rem 1rem;
@@ -142,8 +141,8 @@ main {
 .sticky-section:before {
     display: block;
     content: " ";
-    margin-top: -50px;
-    height: 50px;
+    margin-top: calc(var(--nav-height) * -1);
+    height: var(--nav-height);
     visibility: hidden;
     pointer-events: none;
 }
@@ -154,7 +153,7 @@ main {
 .sticky-title {
     z-index: 10;
     position: sticky;
-    top: 50px;
+    top: 40px;
     padding: 12px 0 10px 16px;
 }
 .project-tile {
@@ -165,10 +164,11 @@ main {
 }
 .project-info {
     padding: 0 0 100px 32px;
-    width: 300px;
+    margin-right: 1.4rem;
+    width: 280px;
     height: 100%;
     position: sticky;
-    top: 96px;
+    top: 86px;
 }
 .project-info h3 {
     z-index: 8;
@@ -181,14 +181,14 @@ main {
     margin-bottom: 2rem;
 }
 .project-description {
-    padding: 0 0 10px 24px;
+    padding: 0 12px 10px 24px;
 }
 .project-content {
     width: 100%;
-    max-width: 1100px;
+    max-width: 900px;
     display: flex;
     justify-content: left;
-    margin-left: 30px;
+    margin: 0 auto;
 }
 .project-content-inner {
     max-width: 95%;
@@ -196,6 +196,15 @@ main {
 }
 .project-content img {
     max-width: 100%;
+}
+.img-fit-window {
+    width: auto;
+    max-height: 90vh;
+}
+.centerer {
+    display: flex;
+    justify-content: center;
+    position: relative;
 }
 .about-container,
 .contact-container {
@@ -222,6 +231,17 @@ main {
 }
 .contact-tile {
     width: 500px;
+}
+.totes-buy {
+    position: absolute;
+    color: var(--color-bg) !important;
+    background-color: var(--color-main);
+    padding: 8px 15px;
+    bottom: 0;
+    right: 0;
+}
+.totes-buy:hover {
+    box-shadow: 0 0 10px var(--color-main);
 }
 /* LINK STYLING */
 a,
@@ -286,7 +306,8 @@ form p {
 }
 form input,
 form textarea {
-    /* font-size: 1rem; */
+    font-size: 1rem;
+    font-family: IBM Plex mono, monospace;
     color: var(--color-main);
     background-color: var(--color-bg);
     background-color: none;
@@ -321,8 +342,8 @@ form button {
     background-color: var(--color-main);
     width: 60%;
     /* border: none; */
-    border-radius: 10px;
-    box-shadow: 0 5px 10px black;
+    border-radius: 100%;
+    box-shadow: 0 2px 5px black;
 }
 form .flex-button {
     display: flex;
@@ -406,10 +427,7 @@ svg:hover {
 }
 
 /* QUERIES BEGIN! */
-@media (max-width: 800px) {
-    :root {
-        --nav-height: 40px;
-    }
+@media (max-width: 860px) {
     body {
         font-size: 14px;
     }
@@ -434,37 +452,33 @@ svg:hover {
     h1 {
         font-size: 1rem;
     }
+    h2,
+    h3 {
+        font-size: 14px;
+    }
+    nav {
+        width: 100vw;
+    }
+    nav p,
+    nav a {
+        font-size: 14px;
+    }
     .welcome-section {
         height: 100vh;
         /* pointer-events: none; */
         padding: 0 1rem;
     }
-    nav {
-        width: 100vw;
-    }
+
     .nav-links {
         padding-left: 0.4rem;
     }
     .darkmode {
         margin-left: 0.4rem;
         width: auto;
-        /* height: calc(var(--nav-height) - 1px); */
         padding: 0 0.8rem;
     }
-    .sticky-section:before {
-        margin-top: calc(var(--nav-height) * -1);
-        height: var(--nav-height);
-    }
-    h2,
-    h3 {
-        font-size: 14px;
-    }
-    nav p,
-    nav a {
-        font-size: 14px;
-    }
     .sticky-title {
-        top: 20px;
+        top: 25px;
         /* margin-bottom: 20vh; */
     }
     .project-tile {
@@ -499,7 +513,7 @@ svg:hover {
     .about-container p,
     .contact-container p {
         font-size: 1rem;
-        font-family: "IBM Plex Mono", monospace;
+        /* font-family: "IBM Plex Mono", monospace; */
     }
     .contact-tile,
     .about-tile {
@@ -511,6 +525,7 @@ svg:hover {
     }
     .img-50-50 {
         display: block;
+        margin-bottom: 0;
     }
     .img-50 {
         width: 100%;
@@ -521,7 +536,7 @@ svg:hover {
     }
     .project-info-mobile-site-links {
         z-index: 8;
-        margin-bottom: 8px;
+        margin-bottom: 1rem;
         /* padding: 8px 10px; */
         color: var(--color-bg);
         background-color: var(--color-main);
