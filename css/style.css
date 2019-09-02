@@ -273,6 +273,7 @@ a:focus {
 .img-50-50 {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 1.8rem;
 }
 .img-50 {
@@ -482,7 +483,8 @@ svg:hover {
         /* margin-bottom: 20vh; */
     }
     .project-tile {
-        display: block;
+        /* display: block; */
+        flex-direction: column-reverse;
     }
     .project-info {
         margin: 0 auto;
@@ -533,6 +535,9 @@ svg:hover {
     }
     .img-eit-site-box {
         margin-bottom: 1.3rem;
+    }
+    .centerer {
+        margin-bottom: 1.4rem;
     }
     .project-info-mobile-site-links {
         z-index: 8;
