@@ -525,10 +525,8 @@ footer {
         padding: 8px 10px;
     }
     .project-tile {
-        min-height: :
         display: block;
         margin-bottom: 0;
-        /* flex-direction: column-reverse; */
     }
     .project-info {
         z-index: 666;
