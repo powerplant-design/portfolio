@@ -527,6 +527,7 @@ footer {
     .project-tile {
         display: block;
         margin-bottom: 0;
+        /* flex-direction: column-reverse; */
     }
     .project-info {
         z-index: 666;
