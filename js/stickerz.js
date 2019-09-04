@@ -11,7 +11,6 @@ const imgs = [
     "../img/stickerz/rzzl-stckr-cantstop.png",
     "../img/stickerz/rzzl-stckr-badge.gif",
     "../img/stickerz/rzzl-stckr-snakegrabber.png",
-    "../img/stickerz/rzzl-stckr-grunge.png",
     "../img/stickerz/rzzl-stckr-navy.gif",
     "../img/stickerz/rzzl-stckr-flamez.gif"
 ];

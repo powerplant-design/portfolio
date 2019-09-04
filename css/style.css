@@ -1,8 +1,7 @@
-/* @import url("https://fonts.googleapis.com/css?family=Roboto+Mono:400,400i&display=swap");
-@import url("https://fonts.googleapis.com/css?family=BioRhyme+Expanded:700&display=swap"); */
 @import url("https://fonts.googleapis.com/css?family=BioRhyme+Expanded:700|IBM+Plex+Mono|IBM+Plex+Sans+Condensed&display=swap");
 @font-face {
     font-family: Bizz Hist;
+    font-display: auto;
     src: url(../font/bizz-hist.otf);
 }
 
@@ -46,8 +45,8 @@ p {
 }
 h1 {
     font-size: 1.8rem;
-    font-family: "BioRhyme Expanded", serif;
-    margin-bottom: 0.6rem;
+    font-family: "BioRhyme Expanded", monospace;
+    margin-bottom: 1rem;
 }
 html,
 body {
@@ -57,6 +56,7 @@ body {
     background-color: var(--color-bg);
     color: var(--color-main);
     font-family: "IBM Plex Mono", monospace;
+    font-size: 15px;
     line-height: 1.5;
     transition: background-color 500ms ease;
 }
@@ -67,7 +67,6 @@ nav {
     width: 100%;
     height: var(--nav-height);
     position: fixed;
-    /* padding: 1rem; */
     top: 0;
     left: 0;
     display: flex;
@@ -89,15 +88,9 @@ ul {
     padding: 0;
     display: flex;
 }
-main {
-    background-color: black;
-    margin: 0 auto;
-    max-width: 1000px;
-}
 .welcome-section {
     position: relative;
     overflow: hidden;
-    /* padding-top: 40px; */
     margin-bottom: 10px;
     height: 100vh;
     width: 100%;
@@ -118,6 +111,127 @@ main {
     border: 1px solid var(--color-main);
     padding: 1.6rem 1rem;
 }
+
+.sticky-section:before {
+    display: block;
+    content: "";
+    margin-top: calc(var(--nav-height) * -1);
+    height: var(--nav-height);
+    visibility: hidden;
+    pointer-events: none;
+}
+.sticky-section {
+    padding: 0;
+    /* min-height: 100vh; */
+}
+.sticky-title {
+    z-index: 10;
+    position: sticky;
+    top: 40px;
+    padding: 12px 0 10px 16px;
+}
+.project-tile {
+    min-height: calc(100vh - 100px);
+    width: 100%;
+    display: flex;
+    margin-bottom: 80px;
+}
+.project-info {
+    padding: 0 0 100px 32px;
+    margin-right: 30px;
+    width: 320px;
+    height: 100%;
+    position: sticky;
+    top: 86px;
+    transition: background-color 500ms;
+}
+.project-info h3 {
+    z-index: 8;
+    margin-bottom: 0.8rem;
+    padding: 8px 10px;
+    color: var(--color-bg);
+    background-color: var(--color-main);
+}
+.project-description p {
+    margin-bottom: 1rem;
+}
+.project-description {
+    padding: 0 24px 10px 24px;
+}
+.project-content {
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    justify-content: left;
+    margin: 0 auto;
+}
+.project-content-inner {
+    max-width: 95%;
+    height: 100%;
+}
+.project-content img {
+    max-width: 100%;
+}
+.img-fit-window {
+    margin-top: 2rem;
+    width: auto;
+    max-height: 80vh;
+    align-self: center;
+}
+.centerer {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: 1.4rem;
+}
+.about-container,
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5rem;
+}
+.about-container {
+    height: calc(100vh - var(--nav-height));
+}
+.contact-section {
+    height: calc(calc(100vh - var(--nav-height)) - 1px);
+}
+.contact-container {
+    height: 90%;
+}
+.about-container h4,
+.about-container p {
+    text-align: center;
+    margin: 0.8rem 0;
+    line-height: 1.8;
+}
+.about-container h4 {
+    font-size: 1.8rem;
+    font-family: "BioRhyme Expanded", serif;
+    margin-bottom: 2rem;
+}
+.about-container p {
+    margin: 0 auto 2rem auto;
+    max-width: 450px;
+    font-size: 1rem;
+    line-height: 2;
+}
+
+.about-tile {
+    max-width: 800px;
+    height: auto;
+    padding: 0 3rem 2rem 3rem;
+    margin-top: -30px;
+    /* font-size: 1.6rem; */
+}
+
+.contact-tile {
+    width: 500px;
+    padding-bottom: 2rem;
+}
+/* BUTTON STYLING */
 .x-button {
     border: none;
     position: absolute;
@@ -137,100 +251,6 @@ main {
 }
 .x-button-effect {
     opacity: 0;
-}
-.sticky-section:before {
-    display: block;
-    content: " ";
-    margin-top: calc(var(--nav-height) * -1);
-    height: var(--nav-height);
-    visibility: hidden;
-    pointer-events: none;
-}
-.sticky-section {
-    padding: 0;
-    min-height: 100vh;
-}
-.sticky-title {
-    z-index: 10;
-    position: sticky;
-    top: 40px;
-    padding: 12px 0 10px 16px;
-}
-.project-tile {
-    min-height: calc(100vh - 100px);
-    width: 100%;
-    display: flex;
-    margin-bottom: 50px;
-}
-.project-info {
-    padding: 0 0 100px 32px;
-    margin-right: 1.4rem;
-    width: 280px;
-    height: 100%;
-    position: sticky;
-    top: 86px;
-}
-.project-info h3 {
-    z-index: 8;
-    margin-bottom: 1.2rem;
-    padding: 8px 10px;
-    color: var(--color-bg);
-    background-color: var(--color-main);
-}
-.project-description p {
-    margin-bottom: 1rem;
-}
-.project-description {
-    padding: 0 12px 10px 24px;
-}
-.project-content {
-    width: 100%;
-    max-width: 900px;
-    display: flex;
-    justify-content: left;
-    margin: 0 auto;
-}
-.project-content-inner {
-    max-width: 95%;
-    height: 100%;
-}
-.project-content img {
-    max-width: 100%;
-}
-.img-fit-window {
-    width: auto;
-    max-height: 90vh;
-}
-.centerer {
-    display: flex;
-    justify-content: center;
-    position: relative;
-}
-.about-container,
-.contact-container {
-    height: calc(100vh - 100px);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0 5rem;
-}
-.about-container p {
-    text-align: center;
-    font-size: 1.8rem;
-    line-height: 1.8;
-    margin: 0.8rem 0;
-    font-family: "BioRhyme Expanded", serif;
-}
-.about-tile {
-    max-width: 800px;
-    height: auto;
-    padding: 0 2rem 2rem 2rem;
-    margin-top: -30px;
-    font-size: 1.6rem;
-}
-.contact-tile {
-    width: 500px;
 }
 .totes-buy {
     position: absolute;
@@ -419,24 +439,43 @@ svg:hover {
     justify-content: center;
     align-items: center;
 }
-
-.hide-mbl {
-    display: inline;
+.show-dsk {
+    display: inline-block;
 }
-.show-mobile {
+.show-mbl {
     display: none;
 }
-
+footer {
+    height: var(--nav-height);
+    border-top: 1px solid var(--color-main);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 10px;
+    font-size: 0.7rem;
+}
 /* QUERIES BEGIN! */
 @media (max-width: 860px) {
     body {
         font-size: 14px;
     }
+    .img-50-50 {
+        display: block;
+        margin-bottom: 0;
+    }
+    .img-50 {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    .img-eit-site-box {
+        margin-bottom: 1.3rem;
+    }
 }
 
-@media (max-width: 560px) {
+@media only screen and (max-device-width: 560px) {
     :root {
-        --nav-height: 30px;
+        --nav-height: 35px;
     }
     .welcome-txt-mbl {
         display: block;
@@ -444,14 +483,17 @@ svg:hover {
     html,
     body {
         font-family: "IBM Plex Sans Condensed", sans-serif;
-        font-size: 14px;
+        font-size: 13px;
         overscroll-behavior: none;
     }
-    .hide-mbl {
+    .show-dsk {
         display: none;
     }
+    .show-mbl {
+        display: inline-block;
+    }
     h1 {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
     h2,
     h3 {
@@ -466,12 +508,12 @@ svg:hover {
     }
     .welcome-section {
         height: 100vh;
-        /* pointer-events: none; */
+        margin-bottom: 0;
         padding: 0 1rem;
     }
 
     .nav-links {
-        padding-left: 0.4rem;
+        padding-left: 8px;
     }
     .darkmode {
         margin-left: 0.4rem;
@@ -479,20 +521,25 @@ svg:hover {
         padding: 0 0.8rem;
     }
     .sticky-title {
-        top: 25px;
-        /* margin-bottom: 20vh; */
+        top: var(--nav-height);
+        padding: 8px 10px;
     }
     .project-tile {
-        /* display: block; */
-        flex-direction: column-reverse;
+        min-height: :
+        display: block;
+        margin-bottom: 0;
+        /* flex-direction: column-reverse; */
     }
     .project-info {
-        margin: 0 auto;
-        padding: 0%;
-        width: 90%;
+        z-index: 666;
+        margin: 00;
+        background-color: var(--color-bg);
+        padding: 0;
+        width: 100%;
         height: 100%;
-        position: static;
-        top: 96px;
+        position: sticky;
+        top: var(--nav-height);
+        border-bottom: 1px solid var(--color-main);
     }
     .project-content {
         width: auto;
@@ -500,56 +547,46 @@ svg:hover {
     }
     .project-content-inner {
         max-width: 100%;
+        margin-top: 2rem;
     }
     .project-description {
         padding-bottom: 1rem;
     }
     .project-description p {
-        margin: 0 1rem 0.5rem 0;
+        margin: 0;
     }
     .about-container,
     .contact-container {
         margin: 0 1rem;
-        /* height: 100vh; */
     }
-    .about-container p,
-    .contact-container p {
-        font-size: 1rem;
-        /* font-family: "IBM Plex Mono", monospace; */
+    .about-container h4 {
+        font-size: 1.6rem;
+        /* margin-bottom: 1rem; */
+        line-height: 1.7;
+    }
+    .about-container p {
+        margin: 0 1rem 2rem 1rem;
+        line-height: 1.6;
     }
     .contact-tile,
     .about-tile {
-        padding: 0 1rem;
+        padding: 0 2rem 3rem 2rem;
         width: auto;
     }
     .img-spacelamp {
+        padding: 1rem 0 3rem 0;
         height: 80vh;
-    }
-    .img-50-50 {
-        display: block;
-        margin-bottom: 0;
-    }
-    .img-50 {
-        width: 100%;
-        margin-bottom: 1rem;
-    }
-    .img-eit-site-box {
-        margin-bottom: 1.3rem;
-    }
-    .centerer {
-        margin-bottom: 1.4rem;
     }
     .project-info-mobile-site-links {
         z-index: 8;
         margin-bottom: 1rem;
-        /* padding: 8px 10px; */
         color: var(--color-bg);
         background-color: var(--color-main);
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
-    a.show-mobile {
+    a.show-mbl {
         display: inline-block;
         color: var(--color-bg);
         padding-right: 1rem;
@@ -569,4 +606,3 @@ svg:hover {
         margin-bottom: 10px;
     }
 }
-/*  */
