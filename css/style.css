@@ -81,7 +81,7 @@ nav {
 nav p,
 ul,
 li {
-    margin: 1px;
+    margin: 0;
 }
 ul {
     list-style: none;
