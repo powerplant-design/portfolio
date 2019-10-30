@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=BioRhyme+Expanded:700|IBM+Plex+Mono|IBM+Plex+Sans+Condensed&display=swap");
+@import url('https://fonts.googleapis.com/css?family=BioRhyme+Expanded:700|IBM+Plex+Mono|IBM+Plex+Sans+Condensed&display=swap');
 @font-face {
     font-family: Bizz Hist;
     font-display: auto;
@@ -45,7 +45,7 @@ p {
 }
 h1 {
     font-size: 1.8rem;
-    font-family: "BioRhyme Expanded", monospace;
+    font-family: 'BioRhyme Expanded', monospace;
     margin-bottom: 1rem;
 }
 html,
@@ -55,7 +55,7 @@ body {
 body {
     background-color: var(--color-bg);
     color: var(--color-main);
-    font-family: "IBM Plex Mono", monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 15px;
     line-height: 1.5;
     transition: background-color 500ms ease;
@@ -81,7 +81,7 @@ nav {
 nav p,
 ul,
 li {
-    margin: 0;
+    margin: 1px;
 }
 ul {
     list-style: none;
@@ -114,7 +114,7 @@ ul {
 
 .sticky-section:before {
     display: block;
-    content: "";
+    content: '';
     margin-top: calc(var(--nav-height) * -1);
     height: var(--nav-height);
     visibility: hidden;
@@ -209,7 +209,7 @@ ul {
 }
 .about-container h4 {
     font-size: 1.8rem;
-    font-family: "BioRhyme Expanded", serif;
+    font-family: 'BioRhyme Expanded', serif;
     margin-bottom: 2rem;
 }
 .about-container p {
@@ -482,7 +482,7 @@ footer {
     }
     html,
     body {
-        font-family: "IBM Plex Sans Condensed", sans-serif;
+        font-family: 'IBM Plex Sans Condensed', sans-serif;
         font-size: 13px;
         overscroll-behavior: none;
     }
