@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=BioRhyme+Expanded:700|IBM+Plex+Mono|IBM+Plex+Sans+Condensed&display=swap');
+/* @import url('https://fonts.googleapis.com/css?family=BioRhyme+Expanded:700|IBM+Plex+Mono|IBM+Plex+Sans+Condensed&display=swap'); */
 @font-face {
     font-family: Bizz Hist;
     font-display: auto;
@@ -208,18 +208,19 @@ ul {
 .about-container p {
     text-align: center;
     margin: 0.8rem 0;
-    line-height: 1.8;
 }
 .about-container h4 {
-    font-size: 1.8rem;
-    font-family: 'BioRhyme Expanded', serif;
-    margin-bottom: 2rem;
+    font-family: 'Bizz Hist', monospace;
+    font-size: 3rem;
+    line-height: 1.3;
+    letter-spacing: 0.2rem;
+    margin-bottom: 1.2rem;
 }
 .about-container p {
     margin: 0 auto 2rem auto;
     max-width: 450px;
     font-size: 1rem;
-    line-height: 2;
+    line-height: 1.8;
 }
 
 .about-tile {
@@ -227,7 +228,6 @@ ul {
     height: auto;
     padding: 4rem 3rem 0 3rem;
     margin-top: -30px;
-    /* font-size: 1.6rem; */
 }
 
 .contact-tile {
