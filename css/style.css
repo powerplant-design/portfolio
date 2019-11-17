@@ -13,7 +13,7 @@
     --blend-mode: multiply;
     --nav-height: 40px;
     --color-overlay: aquamarine;
-    --font-vcr: font-family: 'VT323', monospace;
+    --font-vcr: 'VT323', monospace;
 }
 h1::selection,
 h2::selection,
@@ -104,7 +104,6 @@ ul {
     border: 1px solid var(--color-main);
     padding: 1.6rem 1rem;
 } */
-
 .sticky-section:before {
     display: block;
     content: '';
@@ -115,7 +114,6 @@ ul {
 }
 .sticky-section {
     padding: 0;
-    /* min-height: 100vh; */
     margin-bottom: 1px;
 }
 .sticky-title {
@@ -140,8 +138,7 @@ ul {
     transition: background-color 500ms;
 }
 .project-info h3 {
-    /* font-family: 'IBM Plex Mono', monospace; */
-    font-family: 'VT323', monospace;
+    font-family: var(--font-vcr);
     font-size: 1.4rem;
     letter-spacing: 1px;
     z-index: 8;
@@ -207,14 +204,12 @@ ul {
     margin: 0.8rem 0;
 }
 .about-container h1 {
-    font-family: 'VT323', monospace;
+    font-family: var(--font-vcr);
     text-transform: uppercase;
     font-size: 4.4rem;
     line-height: 1.1;
     letter-spacing: 0.1rem;
     margin-bottom: 1.2rem;
-    /* color: var(--color-bg);
-    -webkit-text-stroke: 1px var(--color-main); */
 }
 .about-container p {
     margin: 0 auto 2rem auto;
@@ -222,18 +217,33 @@ ul {
     font-size: 1rem;
     line-height: 1.8;
 }
-
+@keyframes scrollPlay {
+    0% {
+        transform: translateY(0) rotate(90deg);
+    }
+    100% {
+        transform: translateY(10px) rotate(90deg);
+    }
+}
+.about-container h5 {
+    padding-left: 40px;
+    font-family: var(--font-vcr);
+    font-size: 3.6rem;
+    text-align: center;
+    pointer-events: none;
+    animation: scrollPlay 500ms ease-in-out 900ms infinite alternate;
+}
 .about-tile {
     max-width: 800px;
     height: auto;
     padding: 4rem 3rem 0 3rem;
     margin-top: -30px;
 }
-
 .contact-tile {
     width: 500px;
     padding-bottom: 2rem;
 }
+
 /* BUTTON STYLING */
 /* .x-button {
     border: none;
@@ -266,6 +276,7 @@ ul {
 .totes-buy:hover {
     box-shadow: 0 0 10px var(--color-main);
 } */
+
 /* LINK STYLING */
 .about-tile a {
     text-decoration: underline;
@@ -411,7 +422,7 @@ form .flex-button {
 }
 .loader {
     z-index: 999;
-    color:var(--color-bg);
+    color: var(--color-bg);
     width: 100vw;
     height: 100vh;
     animation-name: fadeOut;
@@ -577,9 +588,9 @@ footer {
     .contact-container {
         margin: 0 1rem;
     }
-    .about-container h4 {
-        font-size: 2.6rem;
-        line-height: 1.2;
+    .about-container h1 {
+        font-size: 2.8rem;
+        line-height: 1.1;
     }
     .about-container p {
         margin: 0 1rem 2rem 1rem;
