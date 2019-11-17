@@ -1,8 +1,21 @@
 /* @import url('https://fonts.googleapis.com/css?family=BioRhyme+Expanded:700|IBM+Plex+Mono|IBM+Plex+Sans+Condensed&display=swap'); */
-@font-face {
+/* @font-face {
     font-family: Bizz Hist;
     font-display: auto;
     src: url(../font/bizz-hist.otf);
+} */
+@font-face {
+    font-family: 'Bizz Hist';
+    src: url('/font/00BusinessHistory-Regular.eot');
+    src: url('/font/00BusinessHistory-Regular.eot?#iefix')
+            format('embedded-opentype'),
+        url('/font/00BusinessHistory-Regular.woff2') format('woff2'),
+        url('/font/00BusinessHistory-Regular.woff') format('woff'),
+        url('/font/00BusinessHistory-Regular.ttf') format('truetype'),
+        url('/font/00BusinessHistory-Regular.svg#00BusinessHistory-Regular')
+            format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
 * {
