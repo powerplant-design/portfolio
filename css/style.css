@@ -41,11 +41,6 @@ h6 {
 p {
     margin: 0;
 }
-/* h1 {
-    font-size: 1.8rem;
-    font-family: 'VT323', monospace;
-    margin-bottom: 1rem;
-} */
 html,
 body {
     scroll-behavior: smooth;
@@ -145,7 +140,10 @@ ul {
     transition: background-color 500ms;
 }
 .project-info h3 {
-    font-family: 'IBM Plex Mono', monospace;
+    /* font-family: 'IBM Plex Mono', monospace; */
+    font-family: 'VT323', monospace;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
     z-index: 8;
     margin-bottom: 0.8rem;
     padding: 8px 10px;
@@ -201,14 +199,14 @@ ul {
     height: calc(calc(100vh - var(--nav-height)) - 1px);
 }
 .contact-container {
-    height: 90%;
+    min-height: 90%;
 }
-.about-container h4,
+.about-container h1,
 .about-container p {
     text-align: center;
     margin: 0.8rem 0;
 }
-.about-container h4 {
+.about-container h1 {
     font-family: 'VT323', monospace;
     text-transform: uppercase;
     font-size: 4.4rem;
@@ -391,10 +389,8 @@ form .flex-button {
 .darkmode {
     display: inline-block;
     height: calc(var(--nav-height) - 1px);
-    width: 49px;
-    /* padding: 1rem; */
+    padding: 4px 1rem 0 1rem;
     margin-left: 1rem;
-    /* margin: -1rem -1rem 0 1rem; */
     background-color: var(--color-bg);
     color: var(--color-main);
     outline: none;
@@ -419,17 +415,11 @@ form .flex-button {
     width: 100vw;
     height: 100vh;
     animation-name: fadeOut;
-    animation-duration: 700ms;
-    animation-delay: 700ms;
+    animation-duration: 900ms;
+    animation-delay: 900ms;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-    /* opacity:1; */
 }
-/* .welcome-section img {
-    position: absolute;
-    animation: fadein 500ms;
-    pointer-events: none;
-} */
 
 .colorizer {
     pointer-events: none;
@@ -456,9 +446,11 @@ form .flex-button {
 }
 svg {
     fill: var(--color-main);
+}
+.svg-icon-links {
     margin: 0.6rem;
 }
-svg:hover {
+.svg-icon-links:hover {
     opacity: 0.6;
 }
 .links {
@@ -524,7 +516,7 @@ footer {
     }
     h2,
     h3 {
-        font-size: 14px;
+        font-size: 16px;
     }
     nav {
         width: 100vw;
@@ -542,9 +534,9 @@ footer {
         padding-left: 8px;
     }
     .darkmode {
-        margin-left: 0.4rem;
+        margin-left: 0.8rem;
         width: auto;
-        padding: 0 0.8rem;
+        padding: 4px 0.6rem 0 0.6rem;
     }
     .sticky-title {
         top: var(--nav-height);
@@ -572,7 +564,7 @@ footer {
     }
     .project-content-inner {
         max-width: 100%;
-        margin: 2rem 1rem;
+        margin: 2rem 1rem 0 1rem;
     }
     .project-description {
         padding-bottom: 1rem;
