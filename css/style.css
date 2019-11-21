@@ -193,7 +193,7 @@ ul {
     height: calc(100vh - var(--nav-height));
 }
 .contact-section {
-    height: calc(calc(100vh - var(--nav-height)) - 1px);
+    min-height: calc(calc(100vh - var(--nav-height)) - 1px);
 }
 .contact-container {
     min-height: 90%;
