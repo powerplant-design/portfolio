@@ -468,6 +468,7 @@ svg {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 2rem;
 }
 .show-dsk {
     display: inline-block;
