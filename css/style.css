@@ -1,19 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono|IBM+Plex+Sans+Condensed|VT323&display=swap');
-/* @font-face {
-    font-family: Bizz Hist;
-    font-display: auto;
-    src: url(../font/bizz-hist.otf); */
+@font-face {
+    font-family: Violet-Sans;
+    src: url(../font/violet-sans.woff) format('woff'),
+        url(../font/violet-sans.woff2) format('woff2');
+    font-display: swap;
+}
 * {
     box-sizing: border-box;
 }
 :root {
-    --color-main: aquamarine;
-    --color-bg: rgba(28, 28, 28, 1);
-    --color-bg-trns: rgba(28, 28, 28, 0);
+    --color-main: blue;
+    --color-bg: rgba(255, 255, 255, 1);
+    --color-bg-trns: rgba(255, 255, 255, 0);
     --blend-mode: multiply;
     --nav-height: 40px;
-    --color-overlay: aquamarine;
-    --font-vcr: 'VT323', monospace;
+    --color-overlay: blue;
+    --font-vcr: 'Violet-Sans', Helvetica;
 }
 h1::selection,
 h2::selection,
@@ -139,7 +141,7 @@ ul {
 }
 .project-info h3 {
     font-family: var(--font-vcr);
-    font-size: 1.4rem;
+    font-size: 0.75rem;
     letter-spacing: 1px;
     z-index: 8;
     margin-bottom: 0.8rem;
@@ -201,21 +203,21 @@ ul {
 .about-container h1,
 .about-container p {
     text-align: center;
-    margin: 0.8rem 0;
+    margin: 1.6rem 0 0.7rem 0;
 }
 .about-container h1 {
     font-family: var(--font-vcr);
-    text-transform: uppercase;
-    font-size: 4.4rem;
-    line-height: 1.1;
-    letter-spacing: 0.1rem;
-    margin-bottom: 1.2rem;
+    /* text-transform: uppercase; */
+    font-size: 4.8rem;
+    line-height: 1.15;
+    /* letter-spacing: 0.1rem; */
+    margin-bottom: 1.4rem;
 }
 .about-container p {
-    margin: 0 auto 2rem auto;
-    max-width: 450px;
+    margin: 0 auto;
+    max-width: 480px;
     font-size: 1rem;
-    line-height: 1.8;
+    line-height: 2;
 }
 @keyframes scrollPlay {
     0% {
@@ -234,16 +236,28 @@ ul {
     animation: scrollPlay 500ms ease-in-out 900ms infinite alternate;
 }
 .about-tile {
-    max-width: 800px;
+    max-width: 700px;
     height: auto;
-    padding: 4rem 3rem 0 3rem;
+    /* padding: 4rem 0 0 0; */
     margin-top: -30px;
 }
 .contact-tile {
     width: 500px;
     padding-bottom: 2rem;
 }
-
+@keyframes wave {
+    0% {
+        transform: rotate(10deg);
+    }
+    100% {
+        transform: rotate(30deg);
+    }
+}
+.wave {
+    display: inline-block;
+    /* background-color: blue; */
+    animation: wave 500ms ease-in-out 900ms infinite alternate;
+}
 /* BUTTON STYLING */
 /* .x-button {
     border: none;
@@ -334,8 +348,8 @@ a:focus {
 }
 /* FORM STYLING */
 form {
-    font-family: 'VT323', monospace;
-    font-size: 2rem;
+    font-family: var(--font-vcr);
+    font-size: 1.6rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -412,15 +426,15 @@ form .flex-button {
     box-shadow: 0 0 10px var(--color-main);
 }
 
-@keyframes fadeOut {
+/* @keyframes fadeOut {
     0% {
         height: 100vh;
     }
     100% {
         height: 0vh;
     }
-}
-.loader {
+} */
+/* .loader {
     z-index: 999;
     color: var(--color-bg);
     width: 100vw;
@@ -430,7 +444,7 @@ form .flex-button {
     animation-delay: 900ms;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-}
+} */
 
 .colorizer {
     pointer-events: none;
