@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono|IBM+Plex+Sans+Condensed|VT323&display=swap');
-@font-face {
+/* @font-face {
     font-family: Violet-Sans;
     src: url(../font/violet-sans.woff) format('woff'),
         url(../font/violet-sans.woff2) format('woff2');
     font-display: swap;
-}
+} */
 * {
     box-sizing: border-box;
 }
