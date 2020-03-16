@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono|IBM+Plex+Sans+Condensed|VT323&display=swap');
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 /* @font-face {
     font-family: Violet-Sans;
     src: url(../font/violet-sans.woff) format('woff'),
@@ -15,8 +16,23 @@
     --blend-mode: multiply;
     --nav-height: 40px;
     --color-overlay: blue;
-    --font-vcr: 'Violet-Sans', Helvetica;
+    --font-main: 'Inter', sans-serif;
+    --font-vcr: 'Violet-Sans', Helvetica, sans-serif;
 }
+body::-webkit-scrollbar {
+    width: 0.8rem;
+  }
+
+  body::-webkit-scrollbar-track {
+    transition: background 300ms;
+    background: var(--color-main);
+  }
+
+  body::-webkit-scrollbar-thumb {
+    transition: background 300ms;
+    background: var(--color-bg);
+  }
+
 h1::selection,
 h2::selection,
 h3::selection,
@@ -50,7 +66,7 @@ body {
 body {
     background-color: var(--color-bg);
     color: var(--color-main);
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Inter', sans-serif;
     font-size: 15px;
     line-height: 1.5;
     transition: background-color 500ms ease;
@@ -208,16 +224,16 @@ ul {
 .about-container h1 {
     font-family: var(--font-vcr);
     /* text-transform: uppercase; */
-    font-size: 4.8rem;
+    font-size: 4.4rem;
     line-height: 1.15;
     /* letter-spacing: 0.1rem; */
-    margin-bottom: 1.4rem;
+    margin-bottom: 1.8rem;
 }
 .about-container p {
     margin: 0 auto;
     max-width: 480px;
-    font-size: 1rem;
-    line-height: 2;
+    font-size: 1.2rem;
+    line-height: 1.7;
 }
 @keyframes scrollPlay {
     0% {
@@ -367,7 +383,7 @@ form p {
 form input,
 form textarea {
     font-size: 1rem;
-    font-family: IBM Plex mono, monospace;
+    font-family: var(--font-main);
     color: var(--color-main);
     background-color: var(--color-bg);
     background-color: none;
