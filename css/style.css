@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans+Condensed&display=swap');
+/* @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans+Condensed&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 /* @font-face {
     font-family: Violet-Sans;
@@ -70,6 +70,7 @@ body {
     font-size: 15px;
     line-height: 1.5;
     transition: background-color 500ms ease;
+    border-right: 1px solid var(--color-main);
 }
 nav {
     z-index: 888;
@@ -157,7 +158,7 @@ ul {
 }
 .project-info h3 {
     font-family: var(--font-vcr);
-    font-size: 0.75rem;
+    font-size: 1rem;
     letter-spacing: 1px;
     z-index: 8;
     margin-bottom: 0.8rem;
@@ -259,7 +260,7 @@ ul {
 }
 .contact-tile {
     width: 500px;
-    padding-bottom: 2rem;
+    padding: 4rem 0;
 }
 @keyframes wave {
     0% {
@@ -362,6 +363,11 @@ a:focus {
 .am-imgs {
     margin-bottom: -6px;
 }
+.ob-imgs img {
+    border: 1px solid var(--color-main);
+    box-shadow: 5px 5px 0 var(--color-main);
+    margin-bottom: 2rem;
+}
 /* FORM STYLING */
 form {
     font-family: var(--font-vcr);
@@ -436,6 +442,7 @@ form .flex-button {
     color: var(--color-main);
     outline: none;
     border: none;
+    border-right: 1px solid var(--color-main);
     border-left: 1px solid var(--color-main);
 }
 .darkmode:hover {
@@ -546,6 +553,7 @@ footer {
         font-family: 'IBM Plex Sans Condensed', sans-serif;
         font-size: 13px;
         overscroll-behavior: none;
+        border: none;
     }
     .show-dsk {
         display: none;
@@ -573,12 +581,14 @@ footer {
         padding: 0 1rem;
     }
     .nav-links {
+        font-size: 0.7rem;
         padding-left: 8px;
     }
     .darkmode {
         margin-left: 0.8rem;
         width: auto;
         padding: 4px 0.6rem 0 0.6rem;
+        border-right: none;
     }
     .sticky-title {
         top: var(--nav-height);
@@ -633,7 +643,7 @@ footer {
         width: auto;
     }
     .contact-tile {
-        margin-bottom: 2rem;
+        margin: 3rem 0 2rem;
     }
     .img-spacelamp {
         padding: 1rem 0 3rem 0;
