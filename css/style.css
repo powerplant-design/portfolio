@@ -59,10 +59,10 @@ h6 {
 p {
     margin: 0;
 }
-
+/* 
 p br {
     margin-bottom: 0.3em;
-}
+} */
 
 html,
 body {
@@ -174,8 +174,11 @@ ul {
 .project-description p {
     font-size: 0.9rem;
     line-height: 1.6;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
+/* .project-description p:last-child {
+    margin-bottom: 1.4rem;
+} */
 .project-description {
     padding: 0 24px 10px 24px;
 }
