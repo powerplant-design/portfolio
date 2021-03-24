@@ -184,7 +184,7 @@ ul {
 }
 .project-content {
     width: 100%;
-    max-width: 800px;
+    max-width: 1000px;
     display: flex;
     justify-content: left;
     margin: 0 auto;
