@@ -5,7 +5,7 @@ let toggle = document.querySelector(".darkmode");
 
 let darkmode = true;
 console.table(imgInvert);
-toggle.addEventListener("click", e => {
+toggle.addEventListener("click", (e) => {
     if (darkmode) {
         root.style.setProperty("--color-main", "aquamarine");
         root.style.setProperty("--color-bg", "#1c1c1c");
