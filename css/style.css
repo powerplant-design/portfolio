@@ -1,11 +1,10 @@
-/* @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans+Condensed&display=swap'); */
+@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Sans+Condensed&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
-/* @font-face {
-    font-family: Violet-Sans;
-    src: url(../font/violet-sans.woff) format('woff'),
-        url(../font/violet-sans.woff2) format('woff2');
+@font-face {
+    font-family: "Plaak";
+    src: url(../font/plaak-black.otf) format("opentype");
     font-display: swap;
-} */
+}
 * {
     box-sizing: border-box;
 }
@@ -19,6 +18,7 @@
     --font-main: "Inter", sans-serif;
     --font-vcr: "Violet-Sans", Helvetica, sans-serif;
 }
+
 body::-webkit-scrollbar {
     width: 0.8rem;
 }
@@ -722,4 +722,15 @@ footer {
     .atms-imgs {
         margin-bottom: 1rem;
     }
+    #project-grow {
+        background-position: center bottom !important;
+        background-size: cover !important;
+    }
+}
+
+#project-grow {
+    background-image: url(/img/degrowth.gif);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 70%;
 }
