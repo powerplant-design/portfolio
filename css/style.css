@@ -365,8 +365,12 @@ a:focus {
 }
 
 .img-mobi {
-    border: 1px solid #002f46;
+    border: 1px solid var(--color-main);
     border-radius: 16px;
+}
+
+.bg-changer {
+    background-color: var(--color-main);
 }
 
 .img-margin-bottom {
