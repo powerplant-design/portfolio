@@ -9,12 +9,16 @@
     box-sizing: border-box;
 }
 :root {
-    --color-main: aquamarine;
-    --color-bg: #1c1c1c;
+    --color-main: blue;
+    --color-bg: #fcfcfc;
+    --blend-mode: screen;
+    --color-overlay: blue;
+    /* --color-main: aquamarine;
+    --color-bg: #1c1c1c; */
+    /* --blend-mode: multiply; */
+    /* --color-overlay: aquamarine; */
     --color-bg-trns: rgba(255, 255, 255, 0);
-    --blend-mode: multiply;
     --nav-height: 40px;
-    --color-overlay: aquamarine;
     --font-main: "Inter", sans-serif;
     --font-vcr: "Violet-Sans", Helvetica, sans-serif;
 }
@@ -302,6 +306,9 @@ ul {
     display: inline-block;
     /* background-color: blue; */
     animation: wave 500ms ease-in-out 900ms infinite alternate;
+}
+.img-inverter {
+    filter: invert(1);
 }
 /* BUTTON STYLING */
 /* .x-button {
