@@ -374,14 +374,19 @@ a:focus {
 .img-mobi {
     border: 1px solid var(--color-main);
     border-radius: 16px;
+    margin-bottom: 1.8em;
 }
 
 .bg-changer {
     background-color: var(--color-main);
 }
 
+.img-margin-top {
+    margin-top: 1.8em;
+}
+
 .img-margin-bottom {
-    margin-bottom: 1em;
+    margin-bottom: 1.8em;
 }
 
 .img-rounded-top {
@@ -401,7 +406,7 @@ a:focus {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1.8rem;
+    /* margin-bottom: 1.8rem; */
     gap: 1rem;
 }
 
@@ -433,7 +438,7 @@ a:focus {
 .ob-imgs img {
     border: 1px solid var(--color-main);
     /* box-shadow: 5px 5px 0 var(--color-main); */
-    margin-bottom: 2rem;
+    margin-bottom: 1.8rem;
     border-radius: 16px;
 }
 /* FORM STYLING */
