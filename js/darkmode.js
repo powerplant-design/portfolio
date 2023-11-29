@@ -9,7 +9,7 @@ toggle.addEventListener("click", (e) => {
     if (darkmode) {
         root.style.setProperty("--color-main", "aquamarine");
         root.style.setProperty("--color-bg", "#1c1c1c");
-        root.style.setProperty("--blend-mode", "multiply");
+        root.style.setProperty("--blend-mode", "screen");
         root.style.setProperty("--color-overlay", "aquamarine");
 
         // LOOPING OVER ALL IMGS
@@ -21,7 +21,7 @@ toggle.addEventListener("click", (e) => {
     } else {
         root.style.setProperty("--color-main", "blue");
         root.style.setProperty("--color-bg", "white");
-        root.style.setProperty("--blend-mode", "screen");
+        root.style.setProperty("--blend-mode", "multiply");
         root.style.setProperty("--color-overlay", "blue");
 
         for (var i = 0; i < imgInvert.length; i++) {

@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
-
+/* FONT IMPORTS */
 @font-face {
     font-family: "Roobert";
     src: url(../font/Roobert-Regular.woff) format("woff");
@@ -16,6 +15,7 @@
     font-display: swap;
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 @import url("https://fonts.googleapis.com/css?family=IBM+Plex+Sans+Condensed&display=swap");
 
 * {
@@ -55,12 +55,12 @@
 :root {
     --color-main: blue;
     --color-bg: #fcfcfc;
-    --blend-mode: screen;
+    --blend-mode: multiply;
     --color-overlay: blue;
     --color-bg-trns: rgba(255, 255, 255, 0);
     --nav-height: 40px;
+    --font-display: "Roobert", Helvetica, sans-serif;
     --font-main: "Inter", sans-serif;
-    --font-vcr: "Roobert", Helvetica, sans-serif;
 }
 
 body::-webkit-scrollbar {
@@ -100,10 +100,12 @@ h6 {
     margin: 0;
     font-size: 1rem;
     font-weight: 400;
+    font-feature-settings: "ss02", "ss03";
 }
 
 p {
     margin: 0;
+    font-feature-settings: "ss02", "ss03";
 }
 
 html,
@@ -133,6 +135,10 @@ nav {
     display: flex;
     justify-content: space-between;
     transition: background-color 500ms;
+}
+
+.mix-blend {
+    mix-blend-mode: var(--blend-mode);
 }
 
 .nav-links {
@@ -175,7 +181,7 @@ ul {
 }
 
 .project-tile {
-    min-height: calc(100vh - 100px);
+    /* min-height: calc(100vh - 100px); */
     width: 100%;
     display: flex;
     margin-bottom: 80px;
@@ -192,7 +198,7 @@ ul {
 }
 
 .project-info h3 {
-    font-family: var(--font-vcr);
+    font-family: var(--font-display);
     font-weight: 700;
     font-size: 1rem;
     letter-spacing: 1px;
@@ -273,12 +279,12 @@ ul {
     /* color: var(--color-bg); */
     text-align: center;
     margin: 1.6rem 0 0.7rem 0;
-    font-family: var(--font-vcr);
+    font-family: var(--font-display);
 }
 
 .about-container h1 {
     font-size: 5rem;
-    line-height: 1.15;
+    line-height: 1.1;
     margin-bottom: 2rem;
     opacity: 0;
     animation-name: fade-in;
@@ -334,6 +340,7 @@ ul {
 }
 
 .img-inverter {
+    mix-blend-mode: var(--blend-mode);
     filter: invert(1);
 }
 
@@ -346,10 +353,11 @@ a,
 a:visited {
     text-decoration: none;
     color: var(--color-main);
+    transition: text-shadow 300ms;
 }
 a:hover {
     outline: none;
-    text-shadow: 0 0 10px var(--color-main);
+    text-shadow: 0 0 6px var(--color-main);
 }
 a:focus {
     outline: none;
@@ -445,7 +453,7 @@ a:focus {
 
 /* FORM STYLING */
 form {
-    font-family: var(--font-vcr);
+    font-family: var(--font-display);
     font-size: 1.6rem;
     display: flex;
     flex-direction: column;
@@ -478,6 +486,8 @@ form textarea {
     padding: 10px 16px;
     margin-bottom: 20px;
     transition: background-color 500ms;
+
+    cursor: pointer;
 }
 
 form input:focus,
@@ -504,9 +514,12 @@ form button {
     color: var(--color-bg);
     background-color: var(--color-main);
     width: 60%;
-    /* border: none; */
     border-radius: 100%;
-    box-shadow: 0 2px 5px black;
+    border: 1px solid var(--color-main);
+    transition: box-shadow 300ms;
+    /* box-shadow: 0 2px 5px var(--color-main); */
+
+    cursor: pointer;
 }
 
 form .flex-button {
@@ -526,6 +539,9 @@ form .flex-button {
     border: none;
     border-right: 1px solid var(--color-main);
     border-left: 1px solid var(--color-main);
+
+    transition: box-shadow 300ms;
+    cursor: pointer;
 }
 
 .darkmode:hover {
@@ -562,9 +578,9 @@ svg {
     fill: var(--color-main);
 }
 
-.svg-icon-links {
+/* .svg-icon-links {
     margin: 0.6rem;
-}
+} */
 
 .svg-icon-links:hover {
     opacity: 0.6;
@@ -574,6 +590,7 @@ svg {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 0.8rem;
     margin-bottom: 2rem;
 }
 
@@ -722,6 +739,7 @@ footer {
 
     .project-description p {
         margin: 0;
+        margin-bottom: 0.2rem;
         font-size: 1rem;
     }
 
