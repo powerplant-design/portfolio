@@ -11,7 +11,7 @@
     font-family: "Roobert";
     src: url(../font/Roobert-SemiBold.woff) format("woff");
     src: url(../font/Roobert-SemiBold.woff2) format("woff2");
-    font-weight: 700;
+    font-weight: 600;
     font-display: swap;
 }
 
@@ -263,14 +263,32 @@ ul {
     border-bottom: 1px solid var(--color-main);
 }
 
+.hero-image-changer {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 80vh;
+    pointer-events: none;
+}
+
+.img-hover {
+    width: 500%;
+    image-rendering: pixelated;
+    min-height: 100vh;
+}
+
 .about-container {
     height: calc(100vh - var(--nav-height));
 }
 
 .about-tile {
-    max-width: 800px;
+    max-width: 70vw;
     height: auto;
     margin-top: -30px;
+    display: flex;
+    flex-direction: column;
+    gap: 4.5vh;
     /* user-select: none; */
 }
 
@@ -278,14 +296,17 @@ ul {
 .about-container p {
     /* color: var(--color-bg); */
     text-align: center;
-    margin: 1.6rem 0 0.7rem 0;
+    margin: 1.6rem 0 1rem 0;
     font-family: var(--font-display);
 }
 
+.about-container h1 .pixel {
+    font-family: var(--font-display-pixel);
+}
 .about-container h1 {
-    font-size: 5rem;
+    font-size: 6vw;
     line-height: 1.1;
-    margin-bottom: 2rem;
+    margin: 0;
     opacity: 0;
     animation-name: fade-in;
     animation-duration: 1000ms;
@@ -309,15 +330,15 @@ ul {
 
 .about-container p {
     margin: 0 auto;
-    max-width: 700px;
-    font-size: 1.4rem;
-    line-height: 1.7;
+    max-width: 52ch;
+    font-size: 1.6vw;
+    line-height: 1.6;
     opacity: 0;
     animation-name: fade-in;
     animation-duration: 1000ms;
     animation-iteration-count: 1;
     animation-direction: normal;
-    animation-delay: 2.5s;
+    animation-delay: 2s;
     animation-fill-mode: both;
 }
 
@@ -326,7 +347,7 @@ ul {
 }
 
 .contact-container {
-    min-height: 90%;
+    min-height: 90vh;
 }
 
 .contact-tile {
@@ -462,7 +483,7 @@ form {
 
 form p {
     display: inline-block;
-    margin: 10px 0;
+    margin: 0;
 }
 
 .contact-tile form label {
@@ -470,6 +491,7 @@ form p {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-bottom: 20px;
 }
 
 form input,
@@ -479,13 +501,13 @@ form textarea {
     color: var(--color-main);
     background-color: var(--color-bg);
     background-color: none;
+    border-radius: 1.6rem;
     border: none;
     border: 1px solid transparent;
-    border-bottom: 1px solid var(--color-main);
+    border: 1px solid var(--color-main);
     width: 80%;
     padding: 10px 16px;
-    margin-bottom: 20px;
-    transition: background-color 500ms;
+    transition: background-color 500ms, border 500ms, box-shadow 500ms;
 
     cursor: pointer;
 }
@@ -506,6 +528,7 @@ form textarea {
     display: inline-block;
     resize: vertical;
     border: 1px solid var(--color-main);
+    padding-block: 1rem;
 }
 
 form button {
@@ -749,19 +772,21 @@ footer {
     }
 
     .about-container h1 {
-        font-size: 3.8rem;
+        font-size: 3rem;
         line-height: 1.1;
     }
 
     .about-container p {
         margin: 0 1rem 2rem 1rem;
-        line-height: 1.6;
+        font-size: 1.3rem;
+        line-height: 1.5;
     }
 
     .contact-tile,
     .about-tile {
-        padding: 0 2rem 0 2rem;
+        padding: 0;
         width: auto;
+        max-width: 90vw;
     }
 
     .contact-tile {
