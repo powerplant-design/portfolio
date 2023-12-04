@@ -15,8 +15,7 @@
     font-display: swap;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
-@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Sans+Condensed&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed&family=Inter:wght@400;700&display=swap");
 
 * {
     box-sizing: border-box;
@@ -60,7 +59,8 @@
     --color-bg-trns: rgba(255, 255, 255, 0);
     --nav-height: 40px;
     --font-display: "Roobert", Helvetica, sans-serif;
-    --font-main: "Inter", sans-serif;
+    --font-main: "Inter", Helvetica, sans-serif;
+    --font-main-condensed: "IBM Plex Sans Condensed", Helvetica, sans-serif;
 }
 
 body::-webkit-scrollbar {
@@ -105,12 +105,13 @@ h6 {
 
 p {
     margin: 0;
-    font-feature-settings: "ss02", "ss03";
+    /* font-feature-settings: "ss02", "ss03"; */
 }
 
 html,
 body {
     scroll-behavior: smooth;
+    font-family: var(--font-main);
 }
 
 body {
@@ -673,7 +674,7 @@ footer {
 
     html,
     body {
-        font-family: "IBM Plex Sans Condensed", sans-serif;
+        font-family: var(--font-main-condensed);
         font-size: 13px;
         overscroll-behavior: none;
         border: none;
