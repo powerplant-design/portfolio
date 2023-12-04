@@ -1,4 +1,5 @@
-/* FONT IMPORTS */
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed&family=Inter:wght@400;700&display=swap");
+
 @font-face {
     font-family: "Roobert";
     src: url(../font/Roobert-Regular.woff) format("woff");
@@ -14,8 +15,6 @@
     font-weight: 600;
     font-display: swap;
 }
-
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed&family=Inter:wght@400;700&display=swap");
 
 * {
     box-sizing: border-box;
