@@ -860,3 +860,7 @@ footer {
     background-repeat: no-repeat;
     background-size: 70%;
 } */
+
+.hidden {
+    display: none;
+}
