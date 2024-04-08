@@ -450,8 +450,9 @@ a:focus {
     display: block;
 }
 
+.margin-bottom,
 .atms-imgs {
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
 }
 
 .am-imgs-collection {
