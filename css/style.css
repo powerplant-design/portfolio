@@ -470,6 +470,48 @@ a:focus {
     border-radius: 16px;
 }
 
+.ada-type {
+    image-rendering: pixelated;
+    width: 90%;
+}
+
+.ada-random {
+    background-color: #eff2f3;
+    aspect-ratio: 16 / 9;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-inline: 10%;
+    align-items: center;
+    gap: 10%;
+    /* gap: 3rem; */
+}
+
+.ada-random-copy {
+    width: 650px !important;
+    max-height: 300px;
+}
+
+.ada-orbs {
+    filter: invert(1);
+    mix-blend-mode: multiply;
+}
+
+.ada-animated {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #eff2f3;
+    aspect-ratio: 16 / 9;
+    /* padding-bottom: 50%; */
+    background-blend-mode: multiply;
+    image-rendering: pixelated;
+    background-size: 96% 90%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../img/ada-net-cluster-horizontal.gif);
+}
+
 /* FORM STYLING */
 form {
     font-family: var(--font-display);
