@@ -20,10 +20,10 @@ function applyDarkMode() {
 
 // Function to apply light mode styles
 function applyLightMode() {
-    root.style.setProperty("--color-main", "blue");
+    root.style.setProperty("--color-main", "#1c1c1c");
     root.style.setProperty("--color-bg", "white");
     root.style.setProperty("--blend-mode", "multiply");
-    root.style.setProperty("--color-overlay", "blue");
+    root.style.setProperty("--color-overlay", "#1c1c1c");
 
     imgInvert.forEach((img) => img.style.setProperty("filter", "invert(0)"));
 
@@ -68,10 +68,10 @@ toggle.addEventListener("click", () => {
 
 //         darkmode = false;
 //     } else {
-//         root.style.setProperty("--color-main", "blue");
+//         root.style.setProperty("--color-main", "#1c1c1c");
 //         root.style.setProperty("--color-bg", "white");
 //         root.style.setProperty("--blend-mode", "multiply");
-//         root.style.setProperty("--color-overlay", "blue");
+//         root.style.setProperty("--color-overlay", "#1c1c1c");
 
 //         for (var i = 0; i < imgInvert.length; i++) {
 //             imgInvert[i].style.setProperty("filter", "invert(0)");

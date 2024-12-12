@@ -85,10 +85,10 @@
 }
 
 :root {
-    --color-main: blue;
+    --color-main: #1c1c1c;
     --color-bg: #fcfcfc;
     --blend-mode: multiply;
-    --color-overlay: blue;
+    --color-overlay: #1c1c1c;
     --color-bg-trns: rgba(255, 255, 255, 0);
     --nav-height: 40px;
     --font-display: "Roobert", Helvetica, sans-serif;
