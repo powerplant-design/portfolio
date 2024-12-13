@@ -345,6 +345,10 @@ ul {
     /* user-select: none; */
 }
 
+.about-section {
+    border-bottom: 1px solid var(--color-main);
+}
+
 .about-container h1,
 .about-container p,
 .about-container a {
