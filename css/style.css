@@ -902,7 +902,7 @@ footer {
     }
 }
 
-@media only screen and (max-device-width: 560px) {
+@media screen and (max-width: 560px) {
     :root {
         --nav-height: 35px;
     }
